@@ -28,12 +28,8 @@
             </VBox>
             <VBox prefHeight="400.0" prefWidth="211.0">
                <children>
-                  <Label prefHeight="54.0" prefWidth="211.0" text="Player Selected:" />
-                  <Label fx:id="firstNameLabel" alignment="CENTER" prefHeight="46.0" prefWidth="209.0" text="Label" />
-                  <Label fx:id="lastNameLabel" alignment="CENTER" prefHeight="53.0" prefWidth="213.0" text="Label" />
-                  <Label fx:id="positionLabel" alignment="CENTER" prefHeight="52.0" prefWidth="218.0" text="Label" />
-                  <Button fx:id="addToTeamButton" mnemonicParsing="false" onAction="#addToTeam" prefHeight="98.0" prefWidth="211.0" text="Add Player" />
-                  <Button fx:id="removeFromTeamButton" mnemonicParsing="false" onAction="#removeFromTeam" prefHeight="96.0" prefWidth="211.0" text="Remove Player" />
+                  <Button fx:id="addToTeamButton" mnemonicParsing="false" onAction="#addToTeam" prefHeight="140.0" prefWidth="211.0" text="Add Player" />
+                  <Button fx:id="removeFromTeamButton" mnemonicParsing="false" onAction="#removeFromTeam" prefHeight="139.0" prefWidth="211.0" text="Remove Player" />
                </children>
             </VBox>
             <VBox prefHeight="400.0" prefWidth="203.0">
