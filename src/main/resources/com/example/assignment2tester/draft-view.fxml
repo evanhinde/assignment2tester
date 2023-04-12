@@ -37,7 +37,7 @@
                   <Label alignment="CENTER" prefHeight="68.0" prefWidth="202.0" text="My Team" />
                   <ListView fx:id="teamListView" prefHeight="232.0" prefWidth="203.0" />
                   <Label prefHeight="46.0" prefWidth="203.0" text="Available Positions" />
-                  <Label fx:id="availablePositionsLabel" prefHeight="45.0" prefWidth="205.0" text="Label" />
+                  <Label fx:id="availablePositionsLabel" prefHeight="45.0" prefWidth="205.0" />
                </children>
             </VBox>
          </children>
