@@ -79,8 +79,12 @@ public class DraftController implements Initializable {
     void addToTeam(ActionEvent event) {
         Player player = leagueListView.getSelectionModel().getSelectedItem();
         if (player != null) {
-            team.addPlayer(player);
-            updateTeamDisplay();
+            if (team.getTeam().size() < 5 && team.getAvailablePositions().contains(player.getPosition())) {
+                team.addPlayer(player);
+                updateTeamDisplay();
+                league.removePlayer(player);
+                updateLeagueDisplay();
+            }
         }
     }
 
@@ -91,13 +95,20 @@ public class DraftController implements Initializable {
         teamListView.getItems().addAll(team.getTeam());
     }
 
+    private void updateLeagueDisplay() {
+        leagueListView.getItems().clear();
+        leagueListView.getItems().addAll(league.getLeague());
+    }
+
     @FXML
     void removeFromTeam(ActionEvent event) {
         Player teamPlayerSelected = teamListView.getSelectionModel().getSelectedItem();
         if (teamPlayerSelected != null) {
             team.removePlayer(teamPlayerSelected);
+            league.addPlayer(teamPlayerSelected);
         }
         updateTeamDisplay();
+        updateLeagueDisplay();
     }
 
 }
